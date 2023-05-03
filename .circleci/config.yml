@@ -10,7 +10,7 @@ jobs:
           name: Lets deploy thsi application
           command: |
             ls
-            aws s3 sync * s3://challeng-static-web/ –recursive
+            aws s3 sync . s3://challeng-static-web/ –recursive
 
 
 
