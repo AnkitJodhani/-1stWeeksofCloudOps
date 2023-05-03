@@ -10,8 +10,7 @@ jobs:
           name: Lets deploy thsi application
           command: |
             ls
-            echo $AWS_S3_BUCKET
-            aws s3 sync * s3://$AWS_S3_BUCKET/
+            aws s3 sync * s3://challeng-static-web/
 
 
 
