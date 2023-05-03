@@ -1,0 +1,23 @@
+version: 2.1
+
+jobs:
+  deploy:
+    docker:
+      - image: cimg/aws:2023.04.1
+    steps:
+      - checkout
+      - run:
+          name: Lets deploy thsi application
+          command: |
+            aws s3 sync * s3://challeng-static-web/
+
+
+
+workflows:
+  Production:
+    jobs:
+      - deploy:
+          filters:
+            branches:
+              only: main
+  
