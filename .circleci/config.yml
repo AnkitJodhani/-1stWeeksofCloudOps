@@ -9,7 +9,8 @@ jobs:
       - run:
           name: Lets deploy thsi application
           command: |
-            aws s3 sync * s3://$AWS_S3_BUCKET/
+            ls
+            # aws s3 sync * s3://$AWS_S3_BUCKET/
 
 
 
